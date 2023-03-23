@@ -9,15 +9,15 @@ country: "au"      # lowercase two-letter ISO country code such as "fr" (see htt
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the
 latitude: "0"       # decimal latitude of workshop venue (use https://www.latlong.net/)
 longitude: "0"       # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "April 13th, 2021"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humandate: "April 20th, 2023"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "9:00am - 12:30pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: 2021-04-13      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: 2021-04-13        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["Paula Martinez"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Dag Evensberget","David Green","Maria Rivera Araya"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+startdate: 2023-04-20      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2023-04-20        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Pauline Lawrey"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["David Green","Marlies Hankel"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["training@qcif.edu.au"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
-eventbrite: "142832191931"        # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+humanitix: "version-control-with-git-200423"         # optional: alphanumeric key for Humanitix registration, e.g., "introduction-to-programming-plotting-and-programming-in-python-200323"
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -63,27 +63,21 @@ It looks like you are setting up a website for a Software Carpentry curriculum b
 {% endif %}
 
 
-{% endcomment %}
-
 {% comment %}
-EVENTBRITE
+HUMANTIX
 
-This block includes the Eventbrite registration widget if
-'eventbrite' has been set in the header.  You can delete it if you
-are not using Eventbrite, or leave it in, since it will not be
-displayed if the 'eventbrite' field in the header is not set.
+This block includes the Humanitix registration widget if
+'humanitix' has been set in the header.  
 {% endcomment %}
-{% if page.eventbrite %}
+{% if page.humanitix %}
 <strong>Some adblockers block the registration window. If you do not see the
   registration box below, please check your adblocker settings.</strong>
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="280px"
-  scrolling="auto">
-</iframe>
+
+<iframe id="iframe-container" src="https://events.humanitix.com/{{page.humanitix}}/tickets" width="90%" height="600px" scrolling="auto" frameborder="0"></iframe>  
+
+
 {% endif %}
+
 
 
 <h2 id="general">General Information</h2>
