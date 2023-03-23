@@ -42,6 +42,7 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 ## Comment out warnings about curriculum
 Check DC curriculum
 
+
 {% if site.carpentry == "dc" %}
 {% unless site.curriculum == "dc-ecology" or site.curriculum == "dc-genomics" or site.curriculum == "dc-socsci" or site.curriculum == "dc-geospatial" %}
 <div class="alert alert-warning">
@@ -61,6 +62,9 @@ It looks like you are setting up a website for a Software Carpentry curriculum b
 </div>
 {% endunless %}
 {% endif %}
+
+
+{% endcomment %}
 
 
 {% comment %}
